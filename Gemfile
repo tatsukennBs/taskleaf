@@ -63,3 +63,12 @@ gem 'slim-rails'
 
 #Add html2slim
 gem 'html2slim'
+
+#Add slim-rails
+gem 'slim-rails'
+
+#Add solargraph
+gem 'solargraph'
+
+#Add rubocop
+gem 'rubocop'

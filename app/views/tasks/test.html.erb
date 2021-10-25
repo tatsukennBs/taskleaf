@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class=table table-hover>
+        <thead class=thead-defalut>
+            <tr>
+                <th><%= Task.human_attribute_name(:name) %></th>
+                <th><%= Task.human_attribute_name(:created_at) %></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @Tasks.each do |task| %>
+            <tr>
+                <td><%= link_to(task.name, task) %></td>
+                <td><%= task.created_at %></td>
+            </tr>                
+            <% end %>
+        </tbody>
+    </table> 
+</body>
+</html>
