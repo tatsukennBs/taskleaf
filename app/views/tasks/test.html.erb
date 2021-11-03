@@ -12,6 +12,7 @@
             <tr>
                 <th><%= Task.human_attribute_name(:name) %></th>
                 <th><%= Task.human_attribute_name(:created_at) %></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -21,6 +22,14 @@
                 <td><%= task.created_at %></td>
             </tr>                
             <% end %>
+            
+            <% if task.errors.present? %>
+                <ul id="error_explanation">
+                    <% task.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                </ul>
+            <% end %>
+            
         </tbody>
     </table> 
 </body>
