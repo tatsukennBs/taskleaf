@@ -37,7 +37,7 @@ class TasksController < ApplicationController
     redirect_to tasks_url, notice: "タスク「#{@task.name}」を削除しました。"
   end
 
-private
+  private
 
   def task_params
     params.require(:task).permit(:name, :description)
